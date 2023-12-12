@@ -5,37 +5,81 @@ import java.util.Scanner;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+    public static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
+// Задача.9.В одномерном массиве, заполненном случайными числами определить минимальные и максимальные элементы.
+// Посчитать колличество отрицательных и положительных элементов, а также колличество нулей с выводом результатов на экран.
 
+//Создать одномерный массив, заполненный случайными числами
+        int[] mas = new int[15];
+        for (int i = 0; i < mas.length; i++) {
+           mas[i] = (int) (Math.random() * 15);
+            System.out.println(mas[i]);
+            }
+        // Определение минимальных и максимальных элементов.
 
-// Задача.7. Показать четные и не четные двухзначные числа из двух введенных пользователем и выстроить их.
-        //-Ввоод 1го числа и проверка на двухзначность, Вввод 2-го числа и проверка на двухзначность,
-        // - Если условие выполняется, то идет сравнение двух переменных друг с другом для выстраивания в ряд.
-        //- После выстраивания в ряд, написание медода расчета не четных чисел в диапазоне, через невозможностью делоения на 2.
-        // - public int compareTo( NumberSubClass referenceName )
-
-        System.out.println("Введите первое двухзначное число");
-        Scanner scan6 = new Scanner(System.in);
-        int twoNum1 = scan6.nextInt();
-        if (twoNum1 < 10 || twoNum1 > 99){
-            System.out.println("Вы ввели не двухзначное число");}
-        System.out.println("Введите второе двухзначное число");
-        int twoNum2 = scan6.nextInt();
-        if (twoNum2 < 10 || twoNum2 > 99){
-            System.out.println("Вы ввели не двухзначное число");}
-        if (twoNum1 < twoNum2);
-        else (twoNum1 !% 2 && < twoNum2 !% 2){
-            int mas2num2 = new int []{twoNum1 !% 2 && < twoNum2 !% 2};
-            for(int i = twoNum1; i < twoNum2; i++)
-            System.out.println(twoNum1 !% 2 && twoNum2 !% 2);
+        int[] counter = new int[15];
+        for (int i = 0; i < mas.length; i++) {
+            counter[mas[i]]++;
         }
-        if (twoNum2 < twoNum1){
-            int newTwoNum1 = twoNum2;
-            int newTwoNum2 = twoNum1;
-            System.out.println("Диапазон вычислений начинается с: "
-                    + newTwoNum1 + " " + "до: " + newTwoNum2);}
+        System.out.println("Значение: \tКолличество повторений:");
+        for (int i = 0; i < counter.length; i++) {
+            System.out.println(i + "\t" + counter[i]);
 
 
+            System.out.println("\nОтрицательные числа:");
+            for (int value : a) {
+                if (value < 0) {
+                    System.out.println(value);
+
+                    //declared 3 integer variables and initialized all with zero
+                    int positiveCount, negativeCount, zeroCount;
+                    positiveCount=negativeCount=zeroCount=0;
+
+                    //Declare and initialize the array elements
+                    int arr[] = {4, 8, -2, 3, -1, 0, 7, 0, -9};
+
+                    //get the length of the array
+                    int size=arr.length;
+
+                    // Print the array elements
+                    System.out.println("Array elements are: "+Arrays.toString(arr));
+
+                    //iterate each element of array
+                    for(int i=0; i < arr.length; i++) {
+
+                        //check positive number
+                        if(arr[i] > 0)
+                            positiveCount++;
+                            //check negative number
+                        else if(arr[i] < 0)
+                            negativeCount++;
+
+                            //check zero
+                        else
+                            zeroCount++;
+                    }
+
+                    //print the result
+                    System.out.println("Count of positive numbers in array: "+positiveCount);
+                    System.out.println("Count of negative numbers in array: "+negativeCount);
+                    System.out.println("Count of zeroes in array: "+zeroCount);
+                }
+        }
     }
-}
+
+       /* int[] array;
+        array = new int[12];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ((int)(Math.random() * 12) - 15);
+            System.out.println(array[i]);
+        }
+//https://ru.stackoverflow.com/questions/434704/%D0%97%D0%B0%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B0-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%BC%D0%B8-%D1%87%D0%B8%D1%81%D0%BB%D0%B0%D0%BC%D0%B8-%D0%B8%D0%B7-%D0%B4%D0%B8%D0%B0%D0%BF%D0%B0%D0%B7%D0%BE%D0%BD%D0%B0-15-15-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-math-rando
+        выводит только отрицательные числа*/
+
+
+
+        }
+
 
